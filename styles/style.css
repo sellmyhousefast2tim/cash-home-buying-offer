@@ -1,0 +1,553 @@
+/* Base Styles for Cash Offer Calculator */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Background image container */
+.background-image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/house-background.webp');
+    /* Fallback gradient if no image */
+    background-color: #1a365d;
+}
+
+/* Overlay to ensure content remains readable */
+.background-overlay {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 54, 93, 0.92) 0%, rgba(44, 82, 130, 0.88) 100%);
+    z-index: -1;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.company-name {
+    color: #48bb78;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.calculator-title {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.calculator-subtitle {
+    color: rgba(255,255,255,0.85);
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.calculator-card {
+    background-color: rgba(255, 255, 255, 0.97);
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.calculator-content {
+    padding: 40px;
+}
+
+.question {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #2d3748;
+    line-height: 1.4;
+}
+
+.question-subtitle {
+    font-size: 0.95rem;
+    color: #718096;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.options {
+    margin-bottom: 20px;
+}
+
+.radio-option, .checkbox-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    padding: 12px 16px;
+    background-color: #f7fafc;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.radio-option:hover, .checkbox-option:hover {
+    background-color: #edf2f7;
+    border-color: #48bb78;
+}
+
+.radio-option input[type="radio"],
+.checkbox-option input[type="checkbox"] {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    accent-color: #48bb78;
+    cursor: pointer;
+}
+
+.radio-option label,
+.checkbox-option label {
+    font-size: 1.05rem;
+    color: #4a5568;
+    cursor: pointer;
+    flex: 1;
+}
+
+.button-container {
+    background-color: #48bb78;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prev-button, .next-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s ease;
+    padding: 8px 16px;
+}
+
+.prev-button:hover, .next-button:hover {
+    opacity: 0.85;
+}
+
+.prev-button:before {
+    content: "←";
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.next-button:after {
+    content: "→";
+    margin-left: 10px;
+    font-size: 1.3rem;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 0.95rem;
+}
+
+.form-group input, 
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fff;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #48bb78;
+    box-shadow: 0 0 0 3px rgba(72, 187, 120, 0.15);
+}
+
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%234a5568' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+
+.required-field {
+    color: #e53e3e;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.progress-bar-container {
+    width: 100%;
+    max-width: 600px;
+    height: 10px;
+    background-color: rgba(255,255,255,0.25);
+    border-radius: 5px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #48bb78 0%, #38a169 100%);
+    transition: width 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Trust badges */
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    color: rgba(255,255,255,0.9);
+    font-size: 0.9rem;
+}
+
+.trust-badge svg {
+    margin-right: 8px;
+    fill: #48bb78;
+}
+
+/* Final form styling */
+.final-form-heading {
+    font-size: 1.7rem;
+    line-height: 1.35;
+    margin-bottom: 25px;
+    color: #2d3748;
+}
+
+.policy-text {
+    font-size: 0.85rem;
+    color: #718096;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.policy-text a {
+    color: #48bb78;
+    text-decoration: none;
+}
+
+.policy-text a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #48bb78;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Submit button styling */
+.submit-button {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(72, 187, 120, 0.4);
+}
+
+/* Info callout */
+.info-callout {
+    background-color: #f0fff4;
+    border-left: 4px solid #48bb78;
+    padding: 16px 20px;
+    margin-bottom: 25px;
+    border-radius: 0 8px 8px 0;
+}
+
+.info-callout p {
+    color: #276749;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Checkbox agreement styling */
+.checkbox-agreement {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.checkbox-agreement input[type="checkbox"] {
+    margin-top: 4px;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    accent-color: #48bb78;
+}
+
+.checkbox-agreement label {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #4a5568;
+}
+
+.checkbox-agreement a {
+    color: #48bb78;
+    text-decoration: none;
+}
+
+/* Thank you page specific styles */
+.thank-you-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.thank-you-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: white;
+}
+
+.thank-you-heading {
+    font-size: 1.8rem;
+    color: #2d3748;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.thank-you-text {
+    font-size: 1.1rem;
+    color: #4a5568;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.next-steps {
+    background-color: #f7fafc;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+.next-steps h3 {
+    color: #2d3748;
+    margin-bottom: 15px;
+    font-size: 1.15rem;
+}
+
+.next-steps-list {
+    list-style: none;
+    padding: 0;
+}
+
+.next-steps-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+.next-steps-list li:last-child {
+    margin-bottom: 0;
+}
+
+.step-number {
+    background-color: #48bb78;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.cta-button-primary {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    color: white;
+    padding: 16px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.cta-button-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(72, 187, 120, 0.4);
+}
+
+.cta-button-secondary {
+    background-color: transparent;
+    border: 2px solid #48bb78;
+    color: #48bb78;
+    padding: 14px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.cta-button-secondary:hover {
+    background-color: #48bb78;
+    color: white;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .company-name {
+        font-size: 1.8rem;
+    }
+    
+    .calculator-title {
+        font-size: 1.3rem;
+    }
+    
+    .calculator-content {
+        padding: 28px 22px;
+    }
+    
+    .question {
+        font-size: 1.15rem;
+    }
+    
+    .radio-option, .checkbox-option {
+        padding: 10px 14px;
+    }
+    
+    .button-container {
+        padding: 15px 25px;
+    }
+    
+    .trust-badges {
+        gap: 15px;
+    }
+    
+    .trust-badge {
+        font-size: 0.8rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-button-primary,
+    .cta-button-secondary {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .background-image-container {
+        background-attachment: scroll;
+        background-position: center top;
+    }
+}
