@@ -28,8 +28,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('/house-background.webp');
-    /* Fallback gradient if no image */
+    background-image: url('https://sellmyhousefast2timphoenix.com/wp-content/uploads/2025/10/AdobeStock_435745183-1-1-1.webp');
     background-color: #1a365d;
 }
 
@@ -123,10 +122,17 @@ body {
     border: 2px solid transparent;
     transition: all 0.2s ease;
     cursor: pointer;
+    user-select: none;
 }
 
 .radio-option:hover, .checkbox-option:hover {
     background-color: #edf2f7;
+    border-color: #48bb78;
+}
+
+.radio-option:has(input:checked), .checkbox-option:has(input:checked),
+.radio-option.selected, .checkbox-option.selected {
+    background-color: #f0fff4;
     border-color: #48bb78;
 }
 
