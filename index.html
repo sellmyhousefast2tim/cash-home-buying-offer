@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get a free, no-obligation cash offer for your Phoenix home in 24 hours. Sell your house fast to a local cash buyer - any condition, any situation.">
+    <title>Get Your Free Cash Offer | Sell My House Fast 2 Tim</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+    <div class="background-image-container"></div>
+    <div class="background-overlay"></div>
+    
+    <div class="header">
+        <div class="company-name">Sell My House Fast 2 Tim</div>
+        <div class="calculator-title">Get Your FREE Cash Offer in 24 Hours</div>
+        <div class="calculator-subtitle">No fees. No repairs. No hassle. Close on your timeline.</div>
+        
+        <div class="trust-badges">
+            <div class="trust-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 2L3 7v7c0 5.25 3.09 10.74 9 12 5.91-1.26 9-6.75 9-12V7l-9-5zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V8.26l7-3.89v8.63z"/></svg>
+                Local Phoenix Buyer
+            </div>
+            <div class="trust-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Any Condition
+            </div>
+            <div class="trust-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                Close in 7 Days
+            </div>
+        </div>
+    </div>
+    
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar" style="width: 10%;"></div>
+    </div>
+
+    <!-- Step 1: Do you own your home? -->
+    <div class="calculator-card" id="step-1">
+        <div class="calculator-content">
+            <div class="question">Do you own the property you're looking to sell? <span class="required-field">*</span></div>
+            <div class="options">
+                <div class="radio-option">
+                    <input type="radio" id="own-yes" name="own-home" value="Yes, I own it">
+                    <label for="own-yes">Yes, I own it</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="own-inherited" name="own-home" value="Inherited property">
+                    <label for="own-inherited">I inherited it</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="own-no" name="own-home" value="No">
+                    <label for="own-no">No, I don't own it</label>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <div style="width: 80px;"></div>
+            <button class="next-button" id="step1-next">NEXT</button>
+        </div>
+    </div>
+
+    <!-- Step 2: Property Type -->
+    <div class="calculator-card hidden" id="step-2">
+        <div class="calculator-content">
+            <div class="question">What type of property is it? <span class="required-field">*</span></div>
+            <div class="options">
+                <div class="radio-option">
+                    <input type="radio" id="type-single" name="property-type" value="Single Family Home">
+                    <label for="type-single">Single Family Home</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="type-condo" name="property-type" value="Condo/Townhouse">
+                    <label for="type-condo">Condo / Townhouse</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="type-multi" name="property-type" value="Multi-Family (2-4 units)">
+                    <label for="type-multi">Multi-Family (2-4 units)</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="type-mobile" name="property-type" value="Mobile/Manufactured Home">
+                    <label for="type-mobile">Mobile / Manufactured Home</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="type-land" name="property-type" value="Vacant Land">
+                    <label for="type-land">Vacant Land</label>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="prev-button" id="step2-prev">PREV</button>
+            <button class="next-button" id="step2-next">NEXT</button>
+        </div>
+    </div>
+
+    <!-- Step 3: Property Condition -->
+    <div class="calculator-card hidden" id="step-3">
+        <div class="calculator-content">
+            <div class="question">What is the current condition of the property? <span class="required-field">*</span>
+                <div class="question-subtitle">Be honest - we buy houses in ANY condition!</div>
+            </div>
+            <div class="options">
+                <div class="radio-option">
+                    <input type="radio" id="condition-excellent" name="condition" value="Excellent - Move-in ready">
+                    <label for="condition-excellent">Excellent - Move-in ready</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="condition-good" name="condition" value="Good - Minor cosmetic updates needed">
+                    <label for="condition-good">Good - Minor cosmetic updates needed</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="condition-fair" name="condition" value="Fair - Needs some repairs">
+                    <label for="condition-fair">Fair - Needs some repairs</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="condition-poor" name="condition" value="Poor - Major repairs needed">
+                    <label for="condition-poor">Poor - Major repairs needed</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="condition-bad" name="condition" value="Very Poor - Significant damage or uninhabitable">
+                    <label for="condition-bad">Very Poor - Significant damage or uninhabitable</label>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="prev-button" id="step3-prev">PREV</button>
+            <button class="next-button" id="step3-next">NEXT</button>
+        </div>
+    </div>
+
+    <!-- Step 4: Major Repairs -->
+    <div class="calculator-card hidden" id="step-4">
+        <div class="calculator-content">
+            <div class="question">Are there any major repairs needed? <span class="required-field">*</span>
+                <div class="question-subtitle">Select all that apply</div>
+            </div>
+            <div class="options">
+                <div class="checkbox-option">
+                    <input type="checkbox" id="repair-roof" name="repairs" value="Roof issues">
+                    <label for="repair-roof">Roof issues</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="repair-foundation" name="repairs" value="Foundation problems">
+                    <label for="repair-foundation">Foundation problems</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="repair-hvac" name="repairs" value="HVAC not working">
+                    <label for="repair-hvac">HVAC not working</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="repair-plumbing" name="repairs" value="Plumbing issues">
+                    <label for="repair-plumbing">Plumbing issues</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="repair-electrical" name="repairs" value="Electrical problems">
+                    <label for="repair-electrical">Electrical problems</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="repair-mold" name="repairs" value="Mold or water damage">
+                    <label for="repair-mold">Mold or water damage</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="repair-none" name="repairs" value="None - No major repairs needed">
+                    <label for="repair-none">None - No major repairs needed</label>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="prev-button" id="step4-prev">PREV</button>
+            <button class="next-button" id="step4-next">NEXT</button>
+        </div>
+    </div>
+
+    <!-- Step 5: Timeline -->
+    <div class="calculator-card hidden" id="step-5">
+        <div class="calculator-content">
+            <div class="question">How quickly do you need to sell? <span class="required-field">*</span></div>
+            <div class="options">
+                <div class="radio-option">
+                    <input type="radio" id="timeline-asap" name="timeline" value="ASAP - As fast as possible">
+                    <label for="timeline-asap">ASAP - As fast as possible</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="timeline-30" name="timeline" value="Within 30 days">
+                    <label for="timeline-30">Within 30 days</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="timeline-60" name="timeline" value="1-2 months">
+                    <label for="timeline-60">1-2 months</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="timeline-90" name="timeline" value="3-6 months">
+                    <label for="timeline-90">3-6 months</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="timeline-flexible" name="timeline" value="Flexible / Just exploring options">
+                    <label for="timeline-flexible">Flexible / Just exploring options</label>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="prev-button" id="step5-prev">PREV</button>
+            <button class="next-button" id="step5-next">NEXT</button>
+        </div>
+    </div>
+
+    <!-- Step 6: Reason for Selling -->
+    <div class="calculator-card hidden" id="step-6">
+        <div class="calculator-content">
+            <div class="question">What's your main reason for selling? <span class="required-field">*</span>
+                <div class="question-subtitle">This helps us understand your situation better</div>
+            </div>
+            <div class="options">
+                <div class="radio-option">
+                    <input type="radio" id="reason-relocating" name="reason" value="Relocating">
+                    <label for="reason-relocating">Relocating for work or personal reasons</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="reason-inherited" name="reason" value="Inherited property">
+                    <label for="reason-inherited">Inherited property</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="reason-financial" name="reason" value="Financial difficulties">
+                    <label for="reason-financial">Financial difficulties / Behind on payments</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="reason-divorce" name="reason" value="Divorce">
+                    <label for="reason-divorce">Divorce or separation</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="reason-downsizing" name="reason" value="Downsizing">
+                    <label for="reason-downsizing">Downsizing / Upgrading</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="reason-landlord" name="reason" value="Tired landlord">
+                    <label for="reason-landlord">Tired of being a landlord</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="reason-repairs" name="reason" value="Cant afford repairs">
+                    <label for="reason-repairs">Can't afford needed repairs</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="reason-other" name="reason" value="Other">
+                    <label for="reason-other">Other</label>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="prev-button" id="step6-prev">PREV</button>
+            <button class="next-button" id="step6-next">NEXT</button>
+        </div>
+    </div>
+
+    <!-- Step 7: Occupancy Status -->
+    <div class="calculator-card hidden" id="step-7">
+        <div class="calculator-content">
+            <div class="question">Is the property currently occupied? <span class="required-field">*</span></div>
+            <div class="options">
+                <div class="radio-option">
+                    <input type="radio" id="occupancy-owner" name="occupancy" value="Owner occupied">
+                    <label for="occupancy-owner">Yes, I live there</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="occupancy-tenant" name="occupancy" value="Tenant occupied">
+                    <label for="occupancy-tenant">Tenant occupied</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="occupancy-vacant" name="occupancy" value="Vacant">
+                    <label for="occupancy-vacant">Vacant / Empty</label>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="prev-button" id="step7-prev">PREV</button>
+            <button class="next-button" id="step7-next">NEXT</button>
+        </div>
+    </div>
+
+    <!-- Step 8: Mortgage Status -->
+    <div class="calculator-card hidden" id="step-8">
+        <div class="calculator-content">
+            <div class="question">Is there a mortgage on the property? <span class="required-field">*</span></div>
+            <div class="options">
+                <div class="radio-option">
+                    <input type="radio" id="mortgage-yes" name="mortgage" value="Yes">
+                    <label for="mortgage-yes">Yes, there's a mortgage</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="mortgage-no" name="mortgage" value="No - Paid off">
+                    <label for="mortgage-no">No - It's paid off / owned free and clear</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="mortgage-unsure" name="mortgage" value="Not sure">
+                    <label for="mortgage-unsure">Not sure</label>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="prev-button" id="step8-prev">PREV</button>
+            <button class="next-button" id="step8-next">NEXT</button>
+        </div>
+    </div>
+
+    <!-- Step 9: Listed with Agent? -->
+    <div class="calculator-card hidden" id="step-9">
+        <div class="calculator-content">
+            <div class="question">Is the property currently listed with a real estate agent? <span class="required-field">*</span></div>
+            <div class="options">
+                <div class="radio-option">
+                    <input type="radio" id="listed-yes" name="listed" value="Yes, currently listed">
+                    <label for="listed-yes">Yes, currently listed</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="listed-expired" name="listed" value="Was listed, now expired">
+                    <label for="listed-expired">Was listed before, but expired</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="listed-no" name="listed" value="Never listed">
+                    <label for="listed-no">No, never listed</label>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="prev-button" id="step9-prev">PREV</button>
+            <button class="next-button" id="step9-next">NEXT</button>
+        </div>
+    </div>
+
+    <!-- Step 10: Contact Form (Final Step) -->
+    <div class="calculator-card hidden" id="step-10">
+        <div class="calculator-content">
+            <div class="question" style="font-size: 1.6rem; line-height: 1.35;">
+                Great! You're Almost Done.<br>
+                <span style="font-weight: 400; font-size: 1.1rem; color: #4a5568;">Enter your details to receive your FREE cash offer.</span>
+            </div>
+            
+            <div class="info-callout">
+                <p>✓ No obligation &nbsp; ✓ No fees &nbsp; ✓ 100% confidential</p>
+            </div>
+            
+            <form action="https://formsubmit.co/team@sellmyhousefast2tim.com" method="POST" id="lead-form">
+                <!-- Form honeypot to prevent spam -->
+                <input type="text" name="_honey" style="display:none">
+                
+                <!-- Disable captcha -->
+                <input type="hidden" name="_captcha" value="false">
+                
+                <!-- Subject line of the email -->
+                <input type="hidden" name="_subject" value="New Cash Offer Lead - Sell My House Fast 2 Tim">
+                
+                <!-- Redirect after submission -->
+                <input type="hidden" name="_next" value="https://sellmyhousefast2timphoenix.com/thank-you.html">
+                
+                <!-- Hidden fields to capture quiz answers -->
+                <input type="hidden" name="ownership" id="form-ownership">
+                <input type="hidden" name="property_type" id="form-property-type">
+                <input type="hidden" name="condition" id="form-condition">
+                <input type="hidden" name="repairs_needed" id="form-repairs">
+                <input type="hidden" name="timeline" id="form-timeline">
+                <input type="hidden" name="reason_for_selling" id="form-reason">
+                <input type="hidden" name="occupancy" id="form-occupancy">
+                <input type="hidden" name="mortgage" id="form-mortgage">
+                <input type="hidden" name="listed_with_agent" id="form-listed">
+                
+                <div class="form-group">
+                    <label for="fullname">Full Name <span class="required-field">*</span></label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required-field">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="required-field">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Property Address <span class="required-field">*</span></label>
+                    <input type="text" id="address" name="property_address" placeholder="123 Main St, Phoenix, AZ 85001" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="source">How did you hear about us?</label>
+                    <select id="source" name="source">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Google">Google</option>
+                        <option value="Direct Mail">Direct Mail</option>
+                        <option value="Referral">Friend/Family Referral</option>
+                        <option value="Driving For Dollars">Saw Your Sign/Bandit Sign</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="checkbox-agreement">
+                    <input type="checkbox" id="consent" name="consent" value="agreed" required>
+                    <label for="consent">
+                        I agree to receive calls, texts, and emails from Sell My House Fast 2 Tim regarding my property. I understand I can opt out at any time. 
+                        <a href="https://sellmyhousefast2timphoenix.com/privacy-policy/" target="_blank">Privacy Policy</a>
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-button">GET MY CASH OFFER →</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 Sell My House Fast 2 Tim. All rights reserved.</p>
+        <p><a href="https://sellmyhousefast2timphoenix.com/privacy-policy/">Privacy Policy</a> | <a href="https://sellmyhousefast2timphoenix.com/terms-conditions/">Terms of Service</a></p>
+    </div>
+
+    <script>
+        // Store form data
+        const formData = {};
+        
+        // Helper function to get selected radio value
+        function getRadioValue(name) {
+            const selected = document.querySelector(`input[name="${name}"]:checked`);
+            return selected ? selected.value : '';
+        }
+        
+        // Helper function to get selected checkbox values
+        function getCheckboxValues(name) {
+            const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+            return Array.from(checkboxes).map(cb => cb.value).join(', ');
+        }
+        
+        // Navigation functions
+        function goToStep(from, to, progressPercent) {
+            document.getElementById(`step-${from}`).classList.add('hidden');
+            document.getElementById(`step-${to}`).classList.remove('hidden');
+            document.getElementById('progress-bar').style.width = progressPercent + '%';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Step 1: Ownership
+        document.getElementById('step1-next').addEventListener('click', function() {
+            if (!document.querySelector('input[name="own-home"]:checked')) {
+                alert('Please select an option to continue.');
+                return;
+            }
+            formData.ownership = getRadioValue('own-home');
+            goToStep(1, 2, 20);
+        });
+
+        // Step 2: Property Type
+        document.getElementById('step2-prev').addEventListener('click', function() {
+            goToStep(2, 1, 10);
+        });
+        document.getElementById('step2-next').addEventListener('click', function() {
+            if (!document.querySelector('input[name="property-type"]:checked')) {
+                alert('Please select your property type.');
+                return;
+            }
+            formData.propertyType = getRadioValue('property-type');
+            goToStep(2, 3, 30);
+        });
+
+        // Step 3: Condition
+        document.getElementById('step3-prev').addEventListener('click', function() {
+            goToStep(3, 2, 20);
+        });
+        document.getElementById('step3-next').addEventListener('click', function() {
+            if (!document.querySelector('input[name="condition"]:checked')) {
+                alert('Please select the property condition.');
+                return;
+            }
+            formData.condition = getRadioValue('condition');
+            goToStep(3, 4, 40);
+        });
+
+        // Step 4: Repairs
+        document.getElementById('step4-prev').addEventListener('click', function() {
+            goToStep(4, 3, 30);
+        });
+        document.getElementById('step4-next').addEventListener('click', function() {
+            formData.repairs = getCheckboxValues('repairs') || 'None selected';
+            goToStep(4, 5, 50);
+        });
+
+        // Step 5: Timeline
+        document.getElementById('step5-prev').addEventListener('click', function() {
+            goToStep(5, 4, 40);
+        });
+        document.getElementById('step5-next').addEventListener('click', function() {
+            if (!document.querySelector('input[name="timeline"]:checked')) {
+                alert('Please select your timeline.');
+                return;
+            }
+            formData.timeline = getRadioValue('timeline');
+            goToStep(5, 6, 60);
+        });
+
+        // Step 6: Reason
+        document.getElementById('step6-prev').addEventListener('click', function() {
+            goToStep(6, 5, 50);
+        });
+        document.getElementById('step6-next').addEventListener('click', function() {
+            if (!document.querySelector('input[name="reason"]:checked')) {
+                alert('Please select your reason for selling.');
+                return;
+            }
+            formData.reason = getRadioValue('reason');
+            goToStep(6, 7, 70);
+        });
+
+        // Step 7: Occupancy
+        document.getElementById('step7-prev').addEventListener('click', function() {
+            goToStep(7, 6, 60);
+        });
+        document.getElementById('step7-next').addEventListener('click', function() {
+            if (!document.querySelector('input[name="occupancy"]:checked')) {
+                alert('Please select the occupancy status.');
+                return;
+            }
+            formData.occupancy = getRadioValue('occupancy');
+            goToStep(7, 8, 80);
+        });
+
+        // Step 8: Mortgage
+        document.getElementById('step8-prev').addEventListener('click', function() {
+            goToStep(8, 7, 70);
+        });
+        document.getElementById('step8-next').addEventListener('click', function() {
+            if (!document.querySelector('input[name="mortgage"]:checked')) {
+                alert('Please select the mortgage status.');
+                return;
+            }
+            formData.mortgage = getRadioValue('mortgage');
+            goToStep(8, 9, 90);
+        });
+
+        // Step 9: Listed
+        document.getElementById('step9-prev').addEventListener('click', function() {
+            goToStep(9, 8, 80);
+        });
+        document.getElementById('step9-next').addEventListener('click', function() {
+            if (!document.querySelector('input[name="listed"]:checked')) {
+                alert('Please select if the property is listed.');
+                return;
+            }
+            formData.listed = getRadioValue('listed');
+            
+            // Populate hidden form fields
+            document.getElementById('form-ownership').value = formData.ownership;
+            document.getElementById('form-property-type').value = formData.propertyType;
+            document.getElementById('form-condition').value = formData.condition;
+            document.getElementById('form-repairs').value = formData.repairs;
+            document.getElementById('form-timeline').value = formData.timeline;
+            document.getElementById('form-reason').value = formData.reason;
+            document.getElementById('form-occupancy').value = formData.occupancy;
+            document.getElementById('form-mortgage').value = formData.mortgage;
+            document.getElementById('form-listed').value = formData.listed;
+            
+            goToStep(9, 10, 100);
+        });
+
+        // Form submission
+        document.getElementById('lead-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let formElement = this;
+            let submitButton = formElement.querySelector('button[type="submit"]');
+            submitButton.textContent = 'Submitting...';
+            submitButton.disabled = true;
+            
+            fetch(formElement.action, {
+                method: 'POST',
+                body: new FormData(formElement)
+            }).then(response => {
+                // Redirect to thank you page
+                window.location.href = 'thank-you.html';
+            }).catch(error => {
+                console.error('Error:', error);
+                // Still redirect on error for better UX
+                window.location.href = 'thank-you.html';
+            });
+        });
+        
+        // Make entire option rows clickable
+        document.querySelectorAll('.radio-option, .checkbox-option').forEach(function(option) {
+            option.addEventListener('click', function(e) {
+                if (e.target.tagName !== 'INPUT') {
+                    const input = this.querySelector('input');
+                    if (input.type === 'checkbox') {
+                        input.checked = !input.checked;
+                    } else {
+                        input.checked = true;
+                    }
+                    input.dispatchEvent(new Event('change'));
+                }
+            });
+        });
+        
+        // Add visual selected state
+        document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(function(input) {
+            input.addEventListener('change', function() {
+                if (this.type === 'radio') {
+                    document.querySelectorAll(`input[name="${this.name}"]`).forEach(function(radio) {
+                        radio.closest('.radio-option').classList.remove('selected');
+                    });
+                }
+                if (this.checked) {
+                    this.closest('.radio-option, .checkbox-option').classList.add('selected');
+                } else {
+                    this.closest('.radio-option, .checkbox-option').classList.remove('selected');
+                }
+            });
+        });
+
+        // Phone number formatting
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 6) {
+                value = '(' + value.substring(0,3) + ') ' + value.substring(3,6) + '-' + value.substring(6,10);
+            } else if (value.length >= 3) {
+                value = '(' + value.substring(0,3) + ') ' + value.substring(3);
+            }
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>
