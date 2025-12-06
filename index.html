@@ -579,26 +579,20 @@
             goToStep(9, 10, 100);
         });
 
-        // Form submission
+        // Form submission - let FormSubmit handle it natively for mobile compatibility
         document.getElementById('lead-form').addEventListener('submit', function(event) {
-            event.preventDefault();
+            // Populate hidden form fields before submit
+            document.getElementById('form-ownership').value = formData.ownership || '';
+            document.getElementById('form-property-type').value = formData.propertyType || '';
+            document.getElementById('form-condition').value = formData.condition || '';
+            document.getElementById('form-repairs').value = formData.repairs || '';
+            document.getElementById('form-timeline').value = formData.timeline || '';
+            document.getElementById('form-reason').value = formData.reason || '';
+            document.getElementById('form-occupancy').value = formData.occupancy || '';
+            document.getElementById('form-mortgage').value = formData.mortgage || '';
+            document.getElementById('form-listed').value = formData.listed || '';
             
-            let formElement = this;
-            let submitButton = formElement.querySelector('button[type="submit"]');
-            submitButton.textContent = 'Submitting...';
-            submitButton.disabled = true;
-            
-            fetch(formElement.action, {
-                method: 'POST',
-                body: new FormData(formElement)
-            }).then(response => {
-                // Redirect to thank you page
-                window.location.href = 'thank-you.html';
-            }).catch(error => {
-                console.error('Error:', error);
-                // Still redirect on error for better UX
-                window.location.href = 'thank-you.html';
-            });
+            // Let the form submit naturally - FormSubmit will redirect to _next URL
         });
         
         // Make entire option rows clickable
