@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -357,18 +358,17 @@
                 <p>✓ No obligation &nbsp; ✓ No fees &nbsp; ✓ 100% confidential</p>
             </div>
             
-            <form action="https://formsubmit.co/team@sellmyhousefast2tim.com" method="POST" id="lead-form">
-                <!-- Form honeypot to prevent spam -->
-                <input type="text" name="_honey" style="display:none">
+            <form action="https://api.web3forms.com/submit" method="POST" id="lead-form">
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="a5c9f5ee-cfa6-4712-8761-1fa8844b6287">
                 
-                <!-- Disable captcha -->
-                <input type="hidden" name="_captcha" value="false">
+                <!-- Form settings -->
+                <input type="hidden" name="subject" value="New Cash Offer Lead - Sell My House Fast 2 Tim">
+                <input type="hidden" name="from_name" value="Cash Offer Calculator">
+                <input type="hidden" name="redirect" value="https://cash-offer.sellmyhousefast2timphoenix.com/thank-you.html">
                 
-                <!-- Subject line of the email -->
-                <input type="hidden" name="_subject" value="New Cash Offer Lead - Sell My House Fast 2 Tim">
-                
-                <!-- Redirect after submission -->
-                <input type="hidden" name="_next" value="https://cash-offer.sellmyhousefast2timphoenix.com/thank-you.html">
+                <!-- Honeypot spam protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                 
                 <!-- Hidden fields to capture quiz answers -->
                 <input type="hidden" name="ownership" id="form-ownership">
@@ -579,9 +579,9 @@
             goToStep(9, 10, 100);
         });
 
-        // Form submission - let FormSubmit handle it natively for mobile compatibility
+        // Form submission - populate hidden fields before native submit
         document.getElementById('lead-form').addEventListener('submit', function(event) {
-            // Populate hidden form fields before submit
+            // Populate hidden form fields
             document.getElementById('form-ownership').value = formData.ownership || '';
             document.getElementById('form-property-type').value = formData.propertyType || '';
             document.getElementById('form-condition').value = formData.condition || '';
@@ -592,7 +592,7 @@
             document.getElementById('form-mortgage').value = formData.mortgage || '';
             document.getElementById('form-listed').value = formData.listed || '';
             
-            // Let the form submit naturally - FormSubmit will redirect to _next URL
+            // Let form submit naturally to Web3Forms
         });
         
         // Make entire option rows clickable
